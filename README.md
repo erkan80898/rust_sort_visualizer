@@ -21,5 +21,5 @@ where, if you wish, could run another simulation.
  
 To end the program, enter Ctrl-C
 
-** Note:The goal of this was to get more familar with rust and try to get
+*Note: The goal of this was to get more familar with rust and try to get
 familiar with it, especially with design patterns.**
