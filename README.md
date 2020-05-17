@@ -1,6 +1,6 @@
 # Rust Sort Visualizer #
 
-###A simple multi-sorting algorithm visualizer implemented in rust.###
+###A simple multi-sorting algorithm visualizer implemented in rust.
 
 
 After building and running with "cargo run" a terminal will appear
