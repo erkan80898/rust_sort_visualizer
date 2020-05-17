@@ -7,8 +7,8 @@ After building and running with "cargo run" a terminal will appear
 asking for: 
 
 * List size
-* Minimal possible value within the list
-* Maximal possible value within the list
+* Minimum possible value within the list
+* Maximum possible value within the list
 * Sorting algorithm to use
 * Sorting order 
 
