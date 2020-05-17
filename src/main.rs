@@ -166,7 +166,7 @@ fn main() {
             }
         }
 
-        let mut vector: Vec<i32> = (0..len).map(|_| rng.gen_range(min, max)).collect();
+        let mut vector: Vec<i32> = (0..len).map(|_| rng.gen_range(min, max+1)).collect();
 
         let mut window: PistonWindow = WindowSettings::new
             ("Sorting Visualizer", [800, 800]).samples(4)
