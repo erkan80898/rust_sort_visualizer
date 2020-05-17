@@ -2,6 +2,11 @@ use piston_window::{PistonWindow, Event};
 use plotters::prelude::{draw_piston_window, WHITE, IntoDrawingArea, ChartBuilder, IntoFont, Histogram, BLUE};
 use plotters::style::Color;
 
+/// This file contains varies sort implementations
+/// All sorts written here take a lambda that will define
+/// it's sorting order
+
+/// Draws to the window
 pub fn draw(window:&mut PistonWindow,vector:&Vec<i32>,min:i32,max:i32) -> Option<Event>{
     draw_piston_window(window, |b|{
         let root = b.into_drawing_area();
@@ -32,7 +37,7 @@ pub fn draw(window:&mut PistonWindow,vector:&Vec<i32>,min:i32,max:i32) -> Option
     })
 }
 
-//INSERTION START
+///INSERTION START
 pub fn insertion_sort<F>(array: &mut Vec<i32>,f: Box<F>, window:&mut PistonWindow,min:i32,max:i32)
 where F: ?Sized + Fn(&i32,&i32) -> bool
 {
@@ -47,7 +52,7 @@ where F: ?Sized + Fn(&i32,&i32) -> bool
 }
 //INSERTION END
 
-//SELECTION START
+///SELECTION START
 pub fn selection_sort<F>(array: &mut Vec<i32>,f: Box<F>,
                       window:&mut PistonWindow,min:i32,max:i32)
 where F: ?Sized + Fn(&i32,&i32)->bool
@@ -70,7 +75,7 @@ where F: ?Sized + Fn(&i32,&i32)->bool
 }
 //SELECTION END
 
-//QUICK START
+///QUICK START
 pub fn quick_sort<F>(array: &mut Vec<i32>, l:i32, h:i32, f: &Box<F>,
                      window:&mut PistonWindow,min:i32,max:i32)
     where F: ?Sized + Fn(&i32, &i32) -> bool
@@ -104,8 +109,7 @@ fn partition_quick<F>(array: &mut Vec<i32>,l:i32,h:i32,f: &Box<F>,
 }
 //QUICK END
 
-//MERGE START
-
+///MERGE START
 fn merge<F>(array:&mut Vec<i32>,l1:i32, h1:i32,l2:i32,h2:i32,
             f: &Box<F>,y: &mut Vec<i32>,window:&mut PistonWindow,min:i32,max:i32)
 where F: ?Sized + Fn(&i32, &i32) -> bool

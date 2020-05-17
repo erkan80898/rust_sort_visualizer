@@ -8,6 +8,7 @@ use std::time::Duration;
 
 const SORTS:&str = "Insertion, Selection, Quick, Merge";
 
+///Enum that represents user selection
 enum Sort{
     Insertion,
     Selection,
@@ -28,6 +29,7 @@ impl Sort{
     }
 }
 
+///CLI processor
 fn cli_helper<'q>(len:&mut u32, min:&mut i32, max:&mut i32) -> Result<(Sort,&'q dyn Fn(&i32, &i32) -> bool),String>{
 
     let mut input = String::new();
